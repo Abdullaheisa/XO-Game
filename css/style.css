@@ -23,7 +23,7 @@ background-color: #f25;
     font-size: 70px;
     transition: .3s;
 }
-.square:hover{
+.bac:hover{
     background-color: black;
 }
 .select{
@@ -45,7 +45,4 @@ button{
     color: white;
     border-radius: 5px;
     cursor: pointer;
-}
-.notHover:hover{
-background-color: #f25;
 }

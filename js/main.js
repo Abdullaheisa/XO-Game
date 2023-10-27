@@ -31,7 +31,7 @@ function turn(id) {
       title.innerHTML = "X";
     }
   } else if (end === true) {
-    ele.classlist.add("notHover");
+    ele.classList.add("ss");
   }
   winner();
 }
@@ -47,6 +47,11 @@ function done(num1, num2, num3) {
     location.reload();
   }, 3000);
   end = true;
+  if (end === true) {
+    for (let i = 0; i < 9; i++) {
+      ele.item(i).classList.remove("bac");
+    }
+  }
 }
 function winner() {
   for (let i = 1; i < 10; i++) {

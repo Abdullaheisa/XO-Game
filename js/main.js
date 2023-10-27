@@ -1,6 +1,21 @@
 let title = document.querySelector(".title");
-let turnMood = "x";
+let allSquare = document.querySelector(".allSquare");
+let select = document.querySelector(".select");
+let turnMood = "";
 let square = [];
+function ternMood(id) {
+  if (id === "chooseX") {
+    turnMood = "x";
+    select.style.display = "none";
+    allSquare.style.display = "block";
+    title.innerHTML = "X";
+  } else {
+    turnMood = "o";
+    select.style.display = "none";
+    allSquare.style.display = "block";
+    title.innerHTML = "O";
+  }
+}
 function turn(id) {
   let element = document.getElementById(id);
   if (turnMood === "x" && element.innerHTML == "") {

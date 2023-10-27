@@ -11,6 +11,9 @@
     margin: 40px 0;
     font-size: 30px;
 }
+.allSquare{
+    display: none;
+}
 .square{
 background-color: #f25;
     width: 100px;
@@ -22,4 +25,23 @@ background-color: #f25;
 }
 .square:hover{
     background-color: black;
+}
+.select{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.select p{
+    background-color: #f25;
+    padding: 10px 0;
+}
+button{
+    width: 100px;
+    border: none;
+    background-color: #f25;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
 }

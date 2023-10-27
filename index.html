@@ -8,16 +8,23 @@
 </head>
 <body>
     <div class="game">
-        <div class="title"><span>X O </span>Game</div>
-        <div onclick="turn(this.id)" id="item1" class="square"></div>
-        <div onclick="turn(this.id)" id="item2" class="square"></div>
-        <div onclick="turn(this.id)" id="item3" class="square"></div>
-        <div onclick="turn(this.id)" id="item4" class="square"></div>
-        <div onclick="turn(this.id)" id="item5" class="square"></div>
-        <div onclick="turn(this.id)" id="item6" class="square"></div>
-        <div onclick="turn(this.id)" id="item7" class="square"></div>
-        <div onclick="turn(this.id)" id="item8" class="square"></div>
-        <div onclick="turn(this.id)" id="item9" class="square"></div>
+        <div class="allSquare">
+        <div class="title"><span>X-O </span>Game</div>
+            <div onclick="turn(this.id)" id="item1" class="square"></div>
+            <div onclick="turn(this.id)" id="item2" class="square"></div>
+            <div onclick="turn(this.id)" id="item3" class="square"></div>
+            <div onclick="turn(this.id)" id="item4" class="square"></div>
+            <div onclick="turn(this.id)" id="item5" class="square"></div>
+            <div onclick="turn(this.id)" id="item6" class="square"></div>
+            <div onclick="turn(this.id)" id="item7" class="square"></div>
+            <div onclick="turn(this.id)" id="item8" class="square"></div>
+            <div onclick="turn(this.id)" id="item9" class="square"></div>
+        </div>
+        <div class="select">
+            <p>Choose X Or o</p>
+            <button onclick="ternMood(this.id)" id="chooseX">X</button>
+            <button onclick="ternMood(this.id)" id="chooseO">0</button>
+        </div>
     </div>
     <script src="js/main.js"></script>
 </body>

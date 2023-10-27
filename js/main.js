@@ -2,6 +2,7 @@ let title = document.querySelector(".title");
 let allSquare = document.querySelector(".allSquare");
 let select = document.querySelector(".select");
 let turnMood = "";
+let end = false;
 let square = [];
 function ternMood(id) {
   if (id === "chooseX") {
@@ -18,14 +19,16 @@ function ternMood(id) {
 }
 function turn(id) {
   let element = document.getElementById(id);
-  if (turnMood === "x" && element.innerHTML == "") {
-    element.innerHTML = "x";
-    turnMood = "o";
-    title.innerHTML = "O";
-  } else if (turnMood === "o" && element.innerHTML == "") {
-    element.innerHTML = "o";
-    turnMood = "x";
-    title.innerHTML = "X";
+  if (end === false) {
+    if (turnMood === "x" && element.innerHTML == "") {
+      element.innerHTML = "x";
+      turnMood = "o";
+      title.innerHTML = "O";
+    } else if (turnMood === "o" && element.innerHTML == "") {
+      element.innerHTML = "o";
+      turnMood = "x";
+      title.innerHTML = "X";
+    }
   }
   winner();
 }
@@ -39,7 +42,8 @@ function done(num1, num2, num3) {
   }, 1000);
   setTimeout(function () {
     location.reload();
-  }, 2000);
+  }, 3000);
+  end = true;
 }
 function winner() {
   for (let i = 1; i < 10; i++) {

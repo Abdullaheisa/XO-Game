@@ -1,6 +1,7 @@
 let title = document.querySelector(".title");
 let allSquare = document.querySelector(".allSquare");
 let select = document.querySelector(".select");
+let ele = document.querySelectorAll(".square");
 let turnMood = "";
 let end = false;
 let square = [];
@@ -29,6 +30,8 @@ function turn(id) {
       turnMood = "x";
       title.innerHTML = "X";
     }
+  } else if (end === true) {
+    ele.classlist.add("notHover");
   }
   winner();
 }

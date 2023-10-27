@@ -39,7 +39,7 @@ function done(num1, num2, num3) {
   }, 1000);
   setTimeout(function () {
     location.reload();
-  }, 4000);
+  }, 2000);
 }
 function winner() {
   for (let i = 1; i < 10; i++) {
@@ -68,5 +68,18 @@ function winner() {
   }
   if (square[3] == square[5] && square[3] == square[7] && square[3] != "") {
     done(3, 5, 7);
+  }
+  if (
+    square[1] != "" &&
+    square[2] != "" &&
+    square[3] != "" &&
+    square[4] != "" &&
+    square[5] != "" &&
+    square[6] != "" &&
+    square[7] != "" &&
+    square[8] != "" &&
+    square[9] != ""
+  ) {
+    location.reload();
   }
 }
